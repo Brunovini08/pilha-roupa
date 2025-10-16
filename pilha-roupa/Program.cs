@@ -27,69 +27,34 @@ void Menu()
                 string cor = Console.ReadLine();
                 Roupa roupa = new Roupa(descricao, cor);
                 pilha.Empilha(roupa);
-                Console.WriteLine("");
-                Console.WriteLine("1 - Empilhar roupa");
-                Console.WriteLine("2 - Desempilhar roupa");
-                Console.WriteLine("3 - Exibir roupa do topo");
-
-                Console.WriteLine("0 - Sair");
-                Console.Write("Escolha uma opção: ");
-
-                opcao = int.Parse(Console.ReadLine());
                 break;
             case 2:
                 Roupa roupaDesempilhada = pilha.Desempilha();
                 if (roupaDesempilhada == null)
                 {
                     Console.WriteLine("A pilha está vazia!");
-                    Console.WriteLine("");
-                    Console.WriteLine("1 - Empilhar roupa");
-                    Console.WriteLine("2 - Desempilhar roupa");
-                    Console.WriteLine("3 - Exibir roupa do topo");
-
-                    Console.WriteLine("0 - Sair");
-                    Console.Write("Escolha uma opção: ");
-
-                    opcao = int.Parse(Console.ReadLine());
                 }
                 else
                 {
                     Console.WriteLine($"Roupa desempilhada: {roupaDesempilhada.Descricao}, Cor: {roupaDesempilhada.Cor}");
-                    Console.WriteLine("");
-                    Console.WriteLine("1 - Empilhar roupa");
-                    Console.WriteLine("2 - Desempilhar roupa");
-                    Console.WriteLine("3 - Exibir roupa do topo");
-
-                    Console.WriteLine("0 - Sair");
-                    Console.Write("Escolha uma opção: ");
-
-                    opcao = int.Parse(Console.ReadLine());
                 }
                 break;
             case 3:
                 pilha.Exibir();
-                Console.WriteLine("");
-                Console.WriteLine("1 - Empilhar roupa");
-                Console.WriteLine("2 - Desempilhar roupa");
-                Console.WriteLine("3 - Exibir roupa do topo");
-                Console.WriteLine("0 - Sair");
-                Console.Write("Escolha uma opção: ");
-
-                opcao = int.Parse(Console.ReadLine());
                 break;
             default:
                 Console.WriteLine("Opção inválida!");
-                Console.WriteLine("");
-                Console.WriteLine("1 - Empilhar roupa");
-                Console.WriteLine("2 - Desempilhar roupa");
-                Console.WriteLine("3 - Exibir roupa do topo");
-
-                Console.WriteLine("0 - Sair");
-                Console.Write("Escolha uma opção: ");
-
-                opcao = int.Parse(Console.ReadLine());
                 break;
         }
+        Console.WriteLine("");
+        Console.WriteLine("1 - Empilhar roupa");
+        Console.WriteLine("2 - Desempilhar roupa");
+        Console.WriteLine("3 - Exibir roupa do topo");
+
+        Console.WriteLine("0 - Sair");
+        Console.Write("Escolha uma opção: ");
+
+        opcao = int.Parse(Console.ReadLine());
     }
 }
 
